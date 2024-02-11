@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск отелей</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #42AAFF;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .container input[type="text"],
+        .container input[type="date"],
+        .container input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .container button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .container button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .container button:hover {
+            background-color: #45a049;
+        }
+
+        .brand-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-weight: bold;
+            font-size: 24px;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .profile-button {
+            position: absolute;
+            top: 55px;
+            right: 62px;
+            background-color: #4CD13D;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .profile-button:hover {
+            background-color: #439D39;
+        }
+
+        .registration-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #037bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .registration-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="brand-label">АВИАСЕЙЛС</div>
+<button class="registration-button" onclick="location.href='/register'">Регистрация</button>
+<button class="profile-button" onclick="location.href='/login'">Логин</button>
+<h1>Поиск отелей</h1>
+<div class="container">
+    <form method="GET" action="">
+        <label for="location">Город или отель (введите название):</label>
+        <input type="text" id="location" name="location" placeholder="Например, Москва" required><br><br>
+
+        <label for="check_in">Дата заезда:</label>
+        <input type="date" id="check_in" name="check_in" required><br><br>
+
+        <label for="check_out">Дата выезда:</label>
+        <input type="date" id="check_out" name="check_out" required><br><br>
+
+        <label for="guests">Количество гостей:</label>
+        <input type="number" id="guests" name="guests" min="1" placeholder="Введите количество гостей" required><br><br>
+        <button type="submit">Найти отели</button>
+    </form>
+    <button class="home" onclick="location.href='/home'">Авиабилеты</button>
+</div>
+</body>
+</html>
